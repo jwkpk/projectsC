@@ -1,0 +1,53 @@
+//module 1
+/*In this task, you have to write a structure that will work both like a regular array in C++ and like a list in Python.
+Namely, write the structure
+template<typename T>
+struct FlexArray;
+Those. it is a template structure. It is an array of elements of type T of fixed length, and the length is passed in the constructor. By default, you should assume that the length is 0. (This does not oblige you to use only classical arrays in your implementation)
+Elements are accessed through the at(unsigned int index) method -- returns the index element of the array. Write this method correctly for both non-constant and const structures. Namely, calling at(i) on constant structures should not allow changing the contents of the array, and moreover, it cannot be left of the = sign
+The Size() method, which returns the current size of the array.
+And now the most interesting.
+Write an operator+ from two FlexArrays and an operator+= where the addition of the FlexArray counts as the concatenation of their elements. Those. {1, 3, 5} + {2, 4} = {1, 3, 5, 2, 4}.
+You can only add two different FlexArrays if their template arguments match.
+operator += should effectively add a new array to the current FlexArray.
+Also write operator* and operator*= of FlexArray and number k > 0, where multiplication by number k is the concatenation of itself k times. Those. {1, 2} * 3 = {1, 2, 1, 2, 1, 2}. We can assume that k -- unsigned long
+You need to be able to multiply both from left to right and from right to left. Those. maybe 3 options in total FlexArray *= k, FlexArray * k, k * FlexArray */
+
+int main() {
+    FlexArray<int> flex(3);
+    flex.at(0) = 1;
+    flex.at(1) = 2;
+    flex.at(2) = 3;
+    std::cout << flex.Size(); // 3
+
+    autoprod = flex * 2;
+
+    for (int i = 0; i < prod.Size(); ++i) {
+        std::cout << prod.at(i) << " ";
+    }
+    std::cout << "\n";
+    // should output 1 2 3 1 2 3
+
+    FlexArray<int> last(2);
+    last.at(0) = 4;
+    last.at(1) = 5;
+    flex += last;
+
+    for (int i = 0; i < flex.Size(); ++i) {
+        std::cout << flex.at(i) << " ";
+    }
+    std::cout << "\n";
+    // should output 1 2 3 4 5
+
+}
+
+/*In total, the implementation of these methods is up to you, the return types are not specifically written here:
+FlexArray<T>::FlexArray();
+FlexArray<T>::FlexArray(size_t);
+FlexArray<T>::at(size_t);
+FlexArray<T>::Size();
+FlexArray<T>::operator += (const FlexArray&);
+FlexArray<T>::operator *= (size_t);
+operator+(const FlexArray<T>&, const FlexArray<T>&);
+operator*(const FlexArray<T>&, size_t);
+operator*(size_t, const FlexArray<T>&); */
