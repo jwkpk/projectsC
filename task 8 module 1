@@ -1,0 +1,36 @@
+//module 1
+//in C++, the basic operator += returns a reference to an object, so you can write code like this:
+
+int x = 2;
+int y = 10;
+int z = 20;
+(x += y) = z;
+std::cout << x << " " << y << " " << z << "\n";
+// output 20 10 20
+The programmer wrote the following code:
+
+
+structNumber { // L1
+    int number = 0; // L2
+    Number operator+=(const Point& another) { // L3
+        number += another.number; // L4
+        return *this; // L5
+    } // L6
+}; // L7
+
+int main() {
+    number x = {2};
+    Number y = {10};
+    Numberz = {20};
+    (x += y) = z;
+    std::cout << x.number << " " << y.number << " " << z.number << "\n";
+    // Output 12 10 20
+}
+
+//but the output is not the same as with regular integers. What line does he need to fix in order for += to work correctly?
+
+
+
+
+
+//answer: L3
