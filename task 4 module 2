@@ -1,0 +1,16 @@
+//module 1
+//choose the correct statements:
+
+1. The constructor is always called during structure creation.
+2. During the creation of the structure, the constructor is called only if it is explicitly implemented in the code.
+3. The destructor is always called when destructing a structure.
+4. During destructuring of a structure, the destructor is called only if it is explicitly implemented in the code.
+5. A structure can have multiple constructors.
+6. A structure can have multiple destructors.
+
+
+
+
+
+
+//answer: 135
