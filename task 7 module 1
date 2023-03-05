@@ -1,0 +1,26 @@
+//module 1
+//the programmer wrote this code. Which line of the proposed ones can be corrected so that the code starts working?
+
+struct UserId { // L1
+    unsigned long long id = 0; // L2
+
+    void Print() { // L3
+        std:cout << "ID is " << id << "\n"; // L4
+    }
+
+    void IsSame(const UserId& another) { // L5
+        if (id != another.id) { // L6
+            std::cout << "Different:\n"; // L7
+            this->Print(); // L8
+            another.Print(); // L9
+        } else { // L10
+            std::cout << "Same:\n"; // L11
+            another.Print(); // L12
+        } // L13
+    } // L14
+}
+
+
+
+
+//answer: L3
