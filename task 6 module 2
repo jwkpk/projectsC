@@ -1,0 +1,26 @@
+//module 1
+//what calls to this function can result in an error?
+
+template<typename T>
+T max(T a, T b) {
+    T res = a;
+    if (b > a) {
+        res = b;
+    }
+    return res;
+}
+intx;
+std::cin >> x;
+int y;
+std::cin >> y;
+
+1: max(x, y)
+2: max<int>(x, y);
+3: max<int&>(x, y);
+4: max<const int&>(x, y);
+
+
+
+
+
+//answer: 34
