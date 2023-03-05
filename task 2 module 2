@@ -1,0 +1,28 @@
+//module 1
+//what will this code output?
+
+#include <iostream>
+
+struct PasswordChecker {
+    int password = 123456789;
+    void setPassword(int newPas) {
+        password = newPas;
+    }
+    bool checkPassword(int pass) {
+        return password == pass;
+    }
+};
+
+int main() {
+    PasswordChecker checker1;
+    PasswordChecker checker2;
+    checker1.setPassword(15);
+    bool same = checker2.checkPassword(15);
+    std::cout << same << "\n";
+}
+
+
+
+
+
+//answer: 0
