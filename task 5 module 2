@@ -1,0 +1,14 @@
+//module 1
+//choose the correct statements:
+
+1. During the creation of the structure, the constructor of the structure itself is first called, and then its fields are created
+2. During the creation of a structure, its fields are first created, and then the constructor of the structure itself is called
+3. When destructing a structure, the destructor of the structure itself is called first, and then its fields are deleted
+4. When deleting a structure, its fields are first removed, and then the destructor of the structure itself is called.
+
+
+
+
+
+
+//answer: 23
